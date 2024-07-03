@@ -1,11 +1,12 @@
 package com.myproject.foodiecliapp;
 
-import com.myproject.foodiecliapp.util.CsvReader;
+import com.myproject.foodiecliapp.ui.Menu;
+
 
 public class Main {
     public static void main(String[] args) {
-        CsvReader csvReader = new CsvReader();
-        System.out.println(csvReader.readCustomerFromCsv());
-    }
+        Menu menu = new Menu();
+        menu.displayMainMenu();;
 
+    }
 }

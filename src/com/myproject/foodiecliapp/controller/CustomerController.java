@@ -1,6 +1,7 @@
 package com.myproject.foodiecliapp.controller;
 
-import com.myproject.foodiecliapp.exceptions.CustomerExistExceptions;
+
+import com.myproject.foodiecliapp.exceptions.CustomerExistsException;
 import com.myproject.foodiecliapp.model.Customer;
 import com.myproject.foodiecliapp.service.CustomerServiceImpl;
 
@@ -12,7 +13,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    public Customer save(Customer customer) throws CustomerExistExceptions {
-        return customerService.save(customer);
+    public Customer save(Customer customer) throws CustomerExistsException {
+        return this.customerService.save(customer);
     }
 }
